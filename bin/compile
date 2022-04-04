@@ -65,6 +65,8 @@ if [ -f sass/style.scss ]; then
   $BUILD_DIR/.gems/bin/sass sass/style.scss style.css | indent
 fi
 
+$BUILD_DIR/.gems/bin/bundle exec rackup config.ru -p ${PORT:-5000}
+
 # build a startup script
 #cat <<EOF >"$BUILD_DIR/bin/start_nginx"
 #!/usr/bin/env bash
