@@ -88,4 +88,4 @@ touch logs/access.log logs/error.log
 (tail -qF -n 0 --pid=\$\$ logs/*.log &)
 exec bin/nginx -p .
 EOF
-chmod +x "$BUILD_DIR/bin/start_nginx"
+#chmod +x "$BUILD_DIR/bin/start_nginx"
