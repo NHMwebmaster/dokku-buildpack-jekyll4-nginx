@@ -66,7 +66,7 @@ if [ -f sass/style.scss ]; then
 fi
 
 # build a startup script
-cat <<EOF >"$BUILD_DIR/bin/start_nginx"
+#cat <<EOF >"$BUILD_DIR/bin/start_nginx"
 #!/usr/bin/env bash
 #erb conf/nginx.conf.erb > conf/nginx.conf
 #mkdir -p logs
