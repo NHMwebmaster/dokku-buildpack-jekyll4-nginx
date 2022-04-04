@@ -32,20 +32,6 @@ else
   echo "-----> Using `ruby -v`"
 fi
 
-# build nginx config unless overridden by user
-if [ ! -f $BUILD_DIR/conf/nginx.conf ]; then
-  echo "-----> Using default nginx.conf.erb"
-  mkdir -p $BUILD_DIR/conf
-  cp $LP_DIR/conf/nginx.conf.erb $BUILD_DIR/conf/nginx.conf.erb
-fi
-
-# build mime.types unless overridden by user
-if [ ! -f $BUILD_DIR/conf/mime.types ]; then
-  echo "-----> Using default mime.types"
-  mkdir -p $BUILD_DIR/conf
-  cp $LP_DIR/conf/mime.types $BUILD_DIR/conf/mime.types
-fi
-
 export GEM_HOME=$BUILD_DIR/.gems
 export PATH=$BUILD_DIR/.gems/bin:$PATH
 
